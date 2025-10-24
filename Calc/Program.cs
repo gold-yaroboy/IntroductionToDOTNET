@@ -14,7 +14,7 @@ namespace Calc
 
 			do
 			{
-				Console.Write("Введите арифметическое выражение ('q' to quit): ");
+				Console.Write("Введите арифметическое выражение: ");
 				string expression = Console.ReadLine();
 				if (expression.Contains('q') || expression.Contains('Q')) { Console.WriteLine("Bye"); break; }
 				expression = expression.Replace(',', '.');
