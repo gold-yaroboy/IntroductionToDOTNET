@@ -10,8 +10,6 @@ namespace Calc
 	{
 		static void Main(string[] args)
 		{
-
-
 			do
 			{
 				Console.Write("Введите арифметическое выражение: ");
@@ -19,14 +17,11 @@ namespace Calc
 				if (expression.Contains('q') || expression.Contains('Q')) { Console.WriteLine("Bye"); break; }
 				expression = expression.Replace(',', '.');
 
-
 				char[] delimiters = new char[] { '+', '-', '*', '/' };
 				string[] numbers = expression.Split(delimiters);
 
-
 				double a = Convert.ToDouble(numbers[0]);
 				double b = Convert.ToDouble(numbers[1]);
-
 
 				if (expression.Contains('+')) Console.WriteLine($"{a} + {b} = {a + b}");
 				else if (expression.Contains("-")) Console.WriteLine($"{a} - {b} = {a - b}");
@@ -37,9 +32,6 @@ namespace Calc
 					else Console.WriteLine($"{a} / {b} = {a / b}");
 				}
 			} while (true);
-
-
-
 		}
 	}
 }
